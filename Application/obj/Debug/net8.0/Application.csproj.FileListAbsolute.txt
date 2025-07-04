@@ -8,6 +8,7 @@ E:\Desafio Paschoaloto\Desafio\Application\obj\Debug\net8.0\Application.Generate
 E:\Desafio Paschoaloto\Desafio\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
 E:\Desafio Paschoaloto\Desafio\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
 E:\Desafio Paschoaloto\Desafio\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+E:\Desafio Paschoaloto\Desafio\Application\obj\Debug\net8.0\Application.sourcelink.json
 E:\Desafio Paschoaloto\Desafio\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date
 E:\Desafio Paschoaloto\Desafio\Application\obj\Debug\net8.0\Application.dll
 E:\Desafio Paschoaloto\Desafio\Application\obj\Debug\net8.0\refint\Application.dll

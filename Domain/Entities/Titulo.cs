@@ -7,9 +7,9 @@ namespace Domain.Entities;
 public class Titulo
 {
     public Guid Id { get; private set; } = Guid.NewGuid(); // 🔑 Chave primária
-    public string Numero { get; private set; }
-    public string NomeDevedor { get; private set; }
-    public string CPF { get; private set; }
+    public string Numero { get; private set; } = default!;
+    public string NomeDevedor { get; private set; } = default!;
+    public string CPF { get; private set; } = default!;
     public decimal JurosMensal { get; private set; }
     public decimal MultaPercentual { get; private set; }
 

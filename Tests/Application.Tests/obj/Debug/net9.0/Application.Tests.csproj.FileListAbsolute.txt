@@ -89,6 +89,7 @@ E:\Desafio Paschoaloto\Desafio\Tests\Application.Tests\obj\Debug\net9.0\Applicat
 E:\Desafio Paschoaloto\Desafio\Tests\Application.Tests\obj\Debug\net9.0\Application.Tests.AssemblyInfoInputs.cache
 E:\Desafio Paschoaloto\Desafio\Tests\Application.Tests\obj\Debug\net9.0\Application.Tests.AssemblyInfo.cs
 E:\Desafio Paschoaloto\Desafio\Tests\Application.Tests\obj\Debug\net9.0\Application.Tests.csproj.CoreCompileInputs.cache
+E:\Desafio Paschoaloto\Desafio\Tests\Application.Tests\obj\Debug\net9.0\Application.Tests.sourcelink.json
 E:\Desafio Paschoaloto\Desafio\Tests\Application.Tests\obj\Debug\net9.0\Applicat.7AAE1402.Up2Date
 E:\Desafio Paschoaloto\Desafio\Tests\Application.Tests\obj\Debug\net9.0\Application.Tests.dll
 E:\Desafio Paschoaloto\Desafio\Tests\Application.Tests\obj\Debug\net9.0\refint\Application.Tests.dll

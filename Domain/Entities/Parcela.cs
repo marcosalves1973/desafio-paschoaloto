@@ -5,8 +5,7 @@ namespace Domain.Entities;
 public class Parcela
 {
     public Guid Id { get; private set; } = Guid.NewGuid(); // 🔑 Chave primária
-    public Guid TituloId { get; set; }                     // 🔗 Chave estrangeira
-
+    public Guid TituloId { get; set; } // FK para Titulo.Id
     public decimal Valor { get; private set; }
     public DateTime Vencimento { get; private set; }
     public int NumeroParcela { get; private set; }

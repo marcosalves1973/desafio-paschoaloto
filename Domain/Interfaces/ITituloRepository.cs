@@ -19,6 +19,7 @@ public interface ITituloRepository
     Task<List<Titulo>> GetAllAsync();
 
     Task<decimal?> ObterValorAtualizadoAsync(string numero);
-    Task<List<Parcela>> ObterParcelasPorTituloAsync(string numero);
 
+    // ✅ Corrigido para retornar DTO
+    //Task<List<ParcelaDto>> ObterParcelasPorTituloAsync(string numero);
 }

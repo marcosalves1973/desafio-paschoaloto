@@ -5,6 +5,7 @@ E:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEd
 E:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
 E:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
 E:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+E:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.sourcelink.json
 E:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.dll
 E:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\refint\Domain.dll
 E:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.pdb

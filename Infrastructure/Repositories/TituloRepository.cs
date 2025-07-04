@@ -46,11 +46,11 @@ public class TituloRepository : ITituloRepository
             cpf,
             jurosMensal,
             multaPercentual,
-            new List<Parcela>() // ← será preenchido abaixo
+            new List<Domain.Entities.Parcela>() // ← será preenchido abaixo
         );
 
         // 🔗 Cria as parcelas associadas ao novo título
-        var parcelas = parcelasInput.Select(p => new Parcela(
+        var parcelas = parcelasInput.Select(p => new Domain.Entities.Parcela(
             novoTitulo.Id,
             p.Valor,
             p.Vencimento,
@@ -79,25 +79,23 @@ public class TituloRepository : ITituloRepository
             .ToListAsync();
     }
 
-public async Task<decimal?> ObterValorAtualizadoAsync(string numero)
-{
-    var titulo = await _context.Titulos
-        .Include(t => t.Parcelas)
-        .FirstOrDefaultAsync(t => t.Numero == numero);
+    public async Task<decimal?> ObterValorAtualizadoAsync(string numero)
+    {
+        var titulo = await _context.Titulos
+            .Include(t => t.Parcelas)
+            .FirstOrDefaultAsync(t => t.Numero == numero);
 
-    if (titulo == null) return null;
+        if (titulo == null) return null;
 
-    return titulo.CalcularValorAtualizado(DateTime.Today);
-}
+        return titulo.CalcularValorAtualizado(DateTime.Today);
+    }
 
-public async Task<List<Parcela>> ObterParcelasPorTituloAsync(string numero)
-{
-    var titulo = await _context.Titulos
-        .Include(t => t.Parcelas)
-        .FirstOrDefaultAsync(t => t.Numero == numero);
+    public async Task<List<Domain.Entities.Parcela>> ObterParcelasPorTituloAsync(string numero)
+    {
+        var titulo = await _context.Titulos
+            .Include(t => t.Parcelas)
+            .FirstOrDefaultAsync(t => t.Numero == numero);
 
-    return titulo?.Parcelas ?? new List<Parcela>();
-}
-
-
+        return titulo?.Parcelas ?? new List<Domain.Entities.Parcela>();
+    }
 }

@@ -152,6 +152,7 @@ E:\Desafio Paschoaloto\Desafio\API\obj\Debug\net8.0\API.AssemblyInfo.cs
 E:\Desafio Paschoaloto\Desafio\API\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
 E:\Desafio Paschoaloto\Desafio\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
 E:\Desafio Paschoaloto\Desafio\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cache
+E:\Desafio Paschoaloto\Desafio\API\obj\Debug\net8.0\API.sourcelink.json
 E:\Desafio Paschoaloto\Desafio\API\obj\Debug\net8.0\rjimswa.dswa.cache.json
 E:\Desafio Paschoaloto\Desafio\API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 E:\Desafio Paschoaloto\Desafio\API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json

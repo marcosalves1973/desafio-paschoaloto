@@ -11,7 +11,7 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
 
         // Connection string para PostgreSQL
 
-        var connectionString = "Host=localhost;Port=5433;Database=desafio_db;Username=postgres;Password=MinhaSenhaForte";
+        var connectionString = "Host=localhost;Port=5433;Database=desafio_db;Username=postgres;Password=postgres";
         optionsBuilder.UseNpgsql(connectionString);
 
         return new AppDbContext(optionsBuilder.Options);

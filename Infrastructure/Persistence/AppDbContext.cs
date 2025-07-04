@@ -19,7 +19,7 @@ public class AppDbContext : DbContext
         {
             entity.ToTable("Titulos");
 
-            entity.HasKey(t => t.Numero);
+            entity.HasKey(t => t.Id);
 
             entity.Property(t => t.Numero).IsRequired();
             entity.Property(t => t.NomeDevedor).IsRequired();
@@ -29,7 +29,7 @@ public class AppDbContext : DbContext
 
             entity.HasMany(t => t.Parcelas)
                   .WithOne(p => p.Titulo)
-                  .HasForeignKey(p => p.TituloNumero)
+                  .HasForeignKey(p => p.TituloId)
                   .OnDelete(DeleteBehavior.Cascade);
         });
 
@@ -38,19 +38,12 @@ public class AppDbContext : DbContext
         {
             entity.ToTable("Parcelas");
 
-            // ✅ Chave primária composta corrigida
-            entity.HasKey(p => new { p.TituloNumero, p.NumeroParcela });
+            entity.HasKey(p => p.Id); // ← chave primária simples
 
-            entity.Property(p => p.TituloNumero).IsRequired();
+            entity.Property(p => p.TituloId).IsRequired();
             entity.Property(p => p.Valor).HasColumnType("decimal(10,2)");
-            entity.Property(p => p.Vencimento).IsRequired();
+            entity.Property(p => p.Vencimento).HasColumnType("timestamp without time zone");
             entity.Property(p => p.NumeroParcela).IsRequired();
         });
     }
-}
-
-public class Parcela
-{
-    // Add the foreign key property for Titulo
-    public int TituloNumero { get; set; }
 }
