@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Desafio Paschoaloto\\Desafio\\api\\api.csproj": {}
+    "C:\\Desafio Paschoaloto\\Desafio\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Desafio Paschoaloto\\Desafio\\api\\api.csproj": {
+    "C:\\Desafio Paschoaloto\\Desafio\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desafio Paschoaloto\\Desafio\\api\\api.csproj",
-        "projectName": "api",
-        "projectPath": "C:\\Desafio Paschoaloto\\Desafio\\api\\api.csproj",
+        "projectUniqueName": "C:\\Desafio Paschoaloto\\Desafio\\API\\API.csproj",
+        "projectName": "API",
+        "projectPath": "C:\\Desafio Paschoaloto\\Desafio\\API\\API.csproj",
         "packagesPath": "C:\\Users\\maral\\.nuget\\packages\\",
-        "outputPath": "C:\\Desafio Paschoaloto\\Desafio\\api\\obj\\",
+        "outputPath": "C:\\Desafio Paschoaloto\\Desafio\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -164,10 +164,9 @@ export class FormularioDevedorComponent {
     
     console.log('Payload enviado para a API:', payload); // 👈 Aqui
 
-
     this.devedorService.salvarDevedor(payload).subscribe({
-      next: () => alert('Dados enviados com sucesso!'),
-      error: err => alert('Erro ao enviar: ' + err.message)
+       next: () => alert('Dados enviados com sucesso!'),
+       error: err => alert('Erro ao enviar: ' + err.message)
     });
   }
 }

@@ -37,7 +37,7 @@ public class TituloService : ITituloService
         await _repository.AddAsync(
             comando.Numero,
             comando.NomeDevedor,
-            comando.CPF,
+            comando.Cpf,
             comando.JurosMensal,
             comando.MultaPercentual,
             parcelas
