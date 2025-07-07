@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "api/1.0.0": {
+      "API/1.0.0": {
         "dependencies": {
           "Application": "1.0.0",
           "Domain": "1.0.0",
@@ -16,7 +16,7 @@
           "Swashbuckle.AspNetCore": "9.0.1"
         },
         "runtime": {
-          "api.dll": {}
+          "API.dll": {}
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -995,7 +995,7 @@
     }
   },
   "libraries": {
-    "api/1.0.0": {
+    "API/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
