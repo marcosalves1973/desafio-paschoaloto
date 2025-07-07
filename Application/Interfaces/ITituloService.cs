@@ -9,4 +9,5 @@ public interface ITituloService
 {
     Task IncluirAsync(IncluirTituloCommand comando);
     Task<List<TituloResumoDto>> ListarAsync();
+    Task<List<TituloComParcelasDto>> ListarComParcelasAsync(string? cpf, string? numeroTitulo, int page, int pageSize);
 }

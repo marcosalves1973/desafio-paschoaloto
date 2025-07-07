@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rDzswZnRiLg=",
+  "dgSpecHash": "tp8SmYq6iS8=",
   "success": true,
-  "projectFilePath": "E:\\Desafio Paschoaloto\\Desafio\\Tests\\Application.Tests\\Application.Tests.csproj",
+  "projectFilePath": "C:\\Desafio Paschoaloto\\Desafio\\Tests\\Application.Tests\\Application.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maral\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
     "C:\\Users\\maral\\.nuget\\packages\\fluentassertions\\8.4.0\\fluentassertions.8.4.0.nupkg.sha512",

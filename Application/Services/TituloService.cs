@@ -57,4 +57,10 @@ public class TituloService : ITituloService
             })
             .ToList();
     }
+    public async Task<List<TituloComParcelasDto>> ListarComParcelasAsync(string? cpf, string? numeroTitulo, int page, int pageSize)
+    {
+        return await _repository.ListarComParcelasAsync(cpf, numeroTitulo, page, pageSize);
+    }
+    
+    
 }

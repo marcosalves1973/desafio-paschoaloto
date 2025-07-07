@@ -19,6 +19,9 @@ public interface ITituloRepository
     Task<List<Titulo>> GetAllAsync();
 
     Task<decimal?> ObterValorAtualizadoAsync(string numero);
+    
+
+    Task<List<TituloComParcelasDto>> ListarComParcelasAsync(string? cpf, string? numero, int page, int pageSize);
 
     // ✅ Corrigido para retornar DTO
     //Task<List<ParcelaDto>> ObterParcelasPorTituloAsync(string numero);

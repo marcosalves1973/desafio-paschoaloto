@@ -1,13 +1,17 @@
 ﻿using System;
 
 namespace Domain.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 public class Parcela
 {
     public Guid Id { get; private set; } = Guid.NewGuid(); // 🔑 Chave primária
     public Guid TituloId { get; set; } // FK para Titulo.Id
     public decimal Valor { get; private set; }
+    [Column(TypeName = "timestamptz")]
     public DateTime Vencimento { get; private set; }
+
     public int NumeroParcela { get; private set; }
 
     public Titulo Titulo { get; set; } = null!;            // Navegação

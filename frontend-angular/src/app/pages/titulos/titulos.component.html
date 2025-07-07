@@ -1,0 +1,53 @@
+<h2>Títulos com Parcelas</h2>
+
+<mat-accordion>
+  <!-- Cabeçalho fixo -->
+  <mat-expansion-panel hideToggle disabled>
+    <mat-expansion-panel-header>
+    <div class="header-row">
+      <div class="header-base HeaderList">Número</div>
+      <div class="header-base HeaderList">Devedor</div>
+      <div class="header-base HeaderList">CPF</div>
+    </div>
+  </mat-expansion-panel-header>
+
+
+  </mat-expansion-panel>
+
+  <!-- Lista de títulos -->
+  <mat-expansion-panel *ngFor="let titulo of titulos">
+    <mat-expansion-panel-header>
+      <div class="header-row">
+        <div class="header-base header-cell">{{ titulo.numero }}</div>
+        <div class="header-base header-cell">{{ titulo.nomeDevedor }}</div>
+        <div class="header-base header-cell">{{ titulo.cpf }}</div>
+      </div>
+
+    </mat-expansion-panel-header>
+
+    <!-- Tabela de parcelas -->
+    <div class="parcelas-wrapper">
+      <table class="parcelas-table">
+        <thead>
+          <tr>
+            <th>Parcela</th>
+            <th>Valor</th>
+            <th>Data de vencimento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of titulo.parcelas; let last = last" [class.ultima-parcela]="last">
+            <td>{{ p.numeroParcela }}</td>
+            <td>{{ p.valor | currency:'BRL' }}</td>
+            <td>{{ p.vencimento | date:'dd/MM/yyyy' }}</td>
+            <td *ngIf="last">
+              <button mat-raised-button color="accent" (click)="calcularEncargos(titulo)">
+                💰 Calcular Encargos
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

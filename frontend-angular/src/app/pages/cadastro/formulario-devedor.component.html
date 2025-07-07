@@ -1,0 +1,81 @@
+<mat-card>
+  <h2>Cadastro de Título</h2>
+
+  <form [formGroup]="devedorForm" (ngSubmit)="onSubmit()">
+    <div class="form-section">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Número</mat-label>
+        <input matInput formControlName="numero" required />
+        <mat-error *ngIf="devedorForm.get('numero')?.hasError('required')">Número é obrigatório</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nome do Devedor</mat-label>
+        <input matInput formControlName="nomeDevedor" required />
+        <mat-error *ngIf="devedorForm.get('nomeDevedor')?.hasError('required')">Nome é obrigatório</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>CPF</mat-label>
+        <input matInput formControlName="cpf" mask="000.000.000-00" required />
+        <mat-error *ngIf="devedorForm.get('cpf')?.hasError('required')">CPF é obrigatório</mat-error>
+        <mat-error *ngIf="devedorForm.get('cpf')?.hasError('cpfInvalido')">CPF inválido</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="half-width">
+        <mat-label>Juros Mensal (%)</mat-label>
+        <input matInput formControlName="jurosMensal" mask="separator.2" thousandSeparator="." decimalMarker="," />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="half-width">
+        <mat-label>Multa Percentual (%)</mat-label>
+        <input matInput formControlName="multaPercentual" mask="separator.2" thousandSeparator="." decimalMarker="," />
+      </mat-form-field>
+    </div>
+
+    <div formArrayName="parcelas">
+      <h3>Parcelas</h3>
+      <div *ngFor="let parcela of parcelas.controls; let i = index" [formGroupName]="i" class="parcela-box">
+        <mat-form-field appearance="outline">
+          <mat-label>Nº</mat-label>
+          <input matInput type="number" formControlName="numeroParcela" readonly />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+           <mat-label>Vencimento</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker"
+              formControlName="vencimento"
+              placeholder="dd/MM/yyyy"
+              required
+            />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline">
+          <mat-label>Valor</mat-label>
+          <input matInput formControlName="valor" mask="separator.2" prefix="R$ " thousandSeparator="." decimalMarker="," />
+        </mat-form-field>
+
+        <button mat-icon-button color="warn" type="button" (click)="removerParcela(i)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button mat-stroked-button color="primary" type="button" (click)="adicionarParcela()">
+        <mat-icon>add</mat-icon>
+        <span>Adicionar Parcela</span>
+      </button>
+
+      <button mat-raised-button color="accent" type="submit">
+        <mat-icon>send</mat-icon>
+        <span>Enviar</span>
+      </button>
+    </div>
+  </form>
+</mat-card>

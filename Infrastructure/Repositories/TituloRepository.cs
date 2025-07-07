@@ -53,7 +53,7 @@ public class TituloRepository : ITituloRepository
         var parcelas = parcelasInput.Select(p => new Domain.Entities.Parcela(
             novoTitulo.Id,
             p.Valor,
-            p.Vencimento,
+            DateTime.SpecifyKind(p.Vencimento, DateTimeKind.Unspecified),
             p.NumeroParcela
         )).ToList();
 
@@ -97,5 +97,38 @@ public class TituloRepository : ITituloRepository
             .FirstOrDefaultAsync(t => t.Numero == numero);
 
         return titulo?.Parcelas ?? new List<Domain.Entities.Parcela>();
+    }
+
+ public async Task<List<TituloComParcelasDto>> ListarComParcelasAsync(string? cpf, string? numeroTitulo, int page, int pageSize)
+    {
+        var query = _context.Titulos
+            .Include(t => t.Parcelas)
+            .AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(cpf))
+            query = query.Where(t => t.CPF == cpf);
+
+        if (!string.IsNullOrWhiteSpace(numeroTitulo))
+            query = query.Where(t => t.Numero == numeroTitulo);
+
+        return await query
+            .OrderBy(t => t.Numero)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .Select(t => new TituloComParcelasDto
+            {
+                Numero = t.Numero,
+                NomeDevedor = t.NomeDevedor,
+                CPF = t.CPF,
+                JurosMensal = t.JurosMensal,
+                MultaPercentual = t.MultaPercentual,
+                Parcelas = t.Parcelas.Select(p => new ParcelaDto
+                {
+                    NumeroParcela = p.NumeroParcela,
+                    Valor = p.Valor,
+                    Vencimento = p.Vencimento
+                }).ToList()
+            })
+            .ToListAsync();
     }
 }

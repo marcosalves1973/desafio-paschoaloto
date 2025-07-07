@@ -1,0 +1,75 @@
+/* Cabeçalho fixo (títulos das colunas) */
+.HeaderList {
+  font-weight: 700;
+  color: #000;
+  background-color: transparent;
+}
+
+/* Espaçamento entre painéis do accordion */
+.mat-expansion-panel-spacing {
+  margin: 1px 0;
+}
+
+/* Linha de cabeçalho e dados com layout flexível */
+.header-row {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+/* Base compartilhada para alinhamento */
+.header-base {
+  flex: 1;
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Estilo visual para os dados */
+.header-cell {
+  font-weight: 500;
+  color: #444;
+}
+
+/* Wrapper para tabela de parcelas com rolagem horizontal */
+.parcelas-wrapper {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+/* Tabela de parcelas */
+.parcelas-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background-color: #fff;
+}
+
+/* Cabeçalho e células da tabela */
+.parcelas-table th,
+.parcelas-table td {
+  padding: 12px 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word;
+}
+
+/* Estilo visual para o cabeçalho da tabela */
+.parcelas-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+.ultima-parcela {
+  background-color: #f0f8ff; /* azul claro */
+  font-weight: 600;
+}
+
+.ultima-parcela button {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 12px;
+}

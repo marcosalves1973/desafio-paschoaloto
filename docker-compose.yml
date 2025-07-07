@@ -3,13 +3,18 @@
     image: postgres:16
     container_name: desafio-postgres
     ports:
-      - "5433:5432"
+      - "15432:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: desafio_db
+      POSTGRES_DB: desafiodb
     volumes:
       - pgdata:/var/lib/postgresql/data
 
 volumes:
   pgdata:
+    driver: local
+    driver_opts:
+      type: none
+      device: C:/Desafio Paschoaloto/Desafio/db
+      o: bind

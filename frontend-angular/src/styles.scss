@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #1a1a2e; // Azul escuro estilo Itaú
+  color: white;
+}
+
+.mat-toolbar {
+  background-color: #1a1a2e !important;
+  color: #ffa500 !important; // Laranja vibrante
+}
+
+a.mat-button.active-link {
+  color: #ffa500 !important;
+  font-weight: bold;
+  text-decoration: underline;
+}

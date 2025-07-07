@@ -1,19 +1,27 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 
-namespace Infrastructure.Persistence;
-
-public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
+namespace Infrastructure.Persistence
 {
-    public AppDbContext CreateDbContext(string[] args)
+    public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {
-        var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
+        public AppDbContext CreateDbContext(string[] args)
+        {
+            // Carrega a configuração do appsettings.json
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false)
+                .Build();
 
-        // Connection string para PostgreSQL
+            // Recupera a string de conexão centralizada
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-        var connectionString = "Host=localhost;Port=5433;Database=desafio_db;Username=postgres;Password=postgres";
-        optionsBuilder.UseNpgsql(connectionString);
+            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
+            optionsBuilder.UseNpgsql(connectionString);
 
-        return new AppDbContext(optionsBuilder.Options);
+            return new AppDbContext(optionsBuilder.Options);
+        }
     }
 }

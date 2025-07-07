@@ -10,3 +10,15 @@ E:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.dll
 E:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\refint\Domain.dll
 E:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.pdb
 E:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:\Desafio Paschoaloto\Desafio\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Desafio Paschoaloto\Desafio\Domain\bin\Debug\net8.0\Domain.dll
+C:\Desafio Paschoaloto\Desafio\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.dll
+C:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Desafio Paschoaloto\Desafio\Domain\obj\Debug\net8.0\ref\Domain.dll
